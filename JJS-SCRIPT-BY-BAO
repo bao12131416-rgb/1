@@ -1,0 +1,40 @@
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local hideEvent = replicatedStorage:WaitForChild("HideName")
+
+local hiddenPlayers = {}
+
+local function setNameVisible(character, visible)
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        humanoid.NameDisplayDistance = visible and 100 or 0
+        humanoid.HealthDisplayDistance = visible and 100 or 0
+    end
+end
+
+hideEvent.OnServerEvent:Connect(function(player, action)
+    if action == "hide" then
+        hiddenPlayers[player] = true
+        local character = player.Character
+        if character then
+            setNameVisible(character, false)
+        end
+    elseif action == "show" then
+        hiddenPlayers[player] = nil
+        local character = player.Character
+        if character then
+            setNameVisible(character, true)
+        end
+    end
+end)
+
+game.Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(character)
+        if hiddenPlayers[player] then
+            setNameVisible(character, false)
+        end
+    end)
+end)
+
+game.Players.PlayerRemoving:Connect(function(player)
+    hiddenPlayers[player] = nil
+end)
