@@ -1,40 +1,76 @@
+loadstring([[
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
 local replicatedStorage = game:GetService("ReplicatedStorage")
 local hideEvent = replicatedStorage:WaitForChild("HideName")
 
-local hiddenPlayers = {}
+local isHidden = false
 
-local function setNameVisible(character, visible)
-    local humanoid = character:FindFirstChildOfClass("Humanoid")
-    if humanoid then
-        humanoid.NameDisplayDistance = visible and 100 or 0
-        humanoid.HealthDisplayDistance = visible and 100 or 0
+-- Tạo GUI
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "HideNameGUI"
+screenGui.Parent = playerGui
+
+local button = Instance.new("TextButton")
+button.Name = "ToggleButton"
+button.Size = UDim2.new(0, 50, 0, 50)
+button.Position = UDim2.new(0, 10, 1, -60)
+button.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
+button.Text = "OFF"
+button.TextScaled = true
+button.Parent = screenGui
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(1, 0)
+corner.Parent = button
+
+button.Activated:Connect(function()
+    isHidden = not isHidden
+    if isHidden then
+        button.Text = "ON"
+        button.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
+        hideEvent:FireServer("hide")
+    else
+        button.Text = "OFF"
+        button.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
+        hideEvent:FireServer("show")
     end
-end
+end)
 
-hideEvent.OnServerEvent:Connect(function(player, action)
-    if action == "hide" then
-        hiddenPlayers[player] = true
-        local character = player.Character
-        if character then
-            setNameVisible(character, false)
-        end
-    elseif action == "show" then
-        hiddenPlayers[player] = nil
-        local character = player.Character
-        if character then
-            setNameVisible(character, true)
-        end
+-- Đảm bảo GUI không mất khi chết
+player.CharacterAdded:Connect(function()
+    wait(0.5)
+    if not screenGui or not screenGui.Parent then
+        -- Tạo lại GUI (tương tự)
+        screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "HideNameGUI"
+        screenGui.Parent = playerGui
+
+        button = Instance.new("TextButton")
+        button.Name = "ToggleButton"
+        button.Size = UDim2.new(0, 50, 0, 50)
+        button.Position = UDim2.new(0, 10, 1, -60)
+        button.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
+        button.Text = "OFF"
+        button.TextScaled = true
+        button.Parent = screenGui
+
+        local newCorner = Instance.new("UICorner")
+        newCorner.CornerRadius = UDim.new(1, 0)
+        newCorner.Parent = button
+
+        button.Activated:Connect(function()
+            isHidden = not isHidden
+            if isHidden then
+                button.Text = "ON"
+                button.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
+                hideEvent:FireServer("hide")
+            else
+                button.Text = "OFF"
+                button.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
+                hideEvent:FireServer("show")
+            end
+        end)
     end
 end)
-
-game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        if hiddenPlayers[player] then
-            setNameVisible(character, false)
-        end
-    end)
-end)
-
-game.Players.PlayerRemoving:Connect(function(player)
-    hiddenPlayers[player] = nil
-end)
+]])()
