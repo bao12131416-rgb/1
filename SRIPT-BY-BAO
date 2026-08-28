@@ -1,0 +1,272 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- 1. TẠO CỬA SỔ MENU
+local Window = Rayfield:CreateWindow({
+   Name = "My Roblox Script Menu",
+   LoadingTitle = "Đang tải giao diện...",
+   LoadingSubtitle = "by Your Name",
+   ConfigurationSaving = { Enabled = false }
+})
+
+local MainTab = Window:CreateTab("Chức Năng", 4483362458)
+
+------------------------------------------------------------------
+-- KHO KHAI BÁO BIẾN DÙNG CHUNG
+------------------------------------------------------------------
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Camera = workspace.CurrentCamera
+local LocalPlayer = Players.LocalPlayer
+
+local function isAlive(player)
+    return player and player.Character and player.Character:FindFirstChild("Humanoid") and player.Character:FindFirstChild("Head") and player.Character.Humanoid.Health > 0
+end
+
+------------------------------------------------------------------
+-- 2. HỆ THỐNG ESP (TRACER TOP + HIGHLIGHT VIỀN ĐỎ)
+------------------------------------------------------------------
+local ESPEnabled = false
+local TracingLines = {}
+
+local function clearTracers()
+    for _, line in pairs(TracingLines) do
+        if line then line:Remove() end
+    end
+    TracingLines = {}
+end
+
+RunService.RenderStepped:Connect(function()
+    clearTracers()
+
+    for _, player in pairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer and isAlive(player) then
+            local character = player.Character
+            
+            -- Highlight (Viền đỏ xuyên tường)
+            local highlight = character:FindFirstChild("ESPHighlight")
+            if ESPEnabled then
+                if not highlight then
+                    highlight = Instance.new("Highlight")
+                    highlight.Name = "ESPHighlight"
+                    highlight.Parent = character
+                    highlight.FillColor = Color3.fromRGB(255, 0, 0)
+                    highlight.FillTransparency = 0.5
+                    highlight.OutlineColor = Color3.fromRGB(255, 0, 0)
+                    highlight.OutlineTransparency = 0
+                    highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+                end
+                highlight.Enabled = true
+            else
+                if highlight then highlight.Enabled = false end
+            end
+
+            -- Tracer (Đường kẻ từ trên màn hình xuống)
+            if ESPEnabled then
+                local headPos, onScreen = Camera:WorldToViewportPoint(character.Head.Position)
+                if onScreen then
+                    local line = Drawing.new("Line")
+                    line.Visible = true
+                    line.From = Vector2.new(Camera.ViewportSize.X / 2, 0)
+                    line.To = Vector2.new(headPos.X, headPos.Y)
+                    line.Color = Color3.fromRGB(255, 0, 0)
+                    line.Thickness = 1.5
+                    line.Transparency = 1
+
+                    table.insert(TracingLines, line)
+                end
+            end
+        end
+    end
+end)
+
+------------------------------------------------------------------
+-- 3. HỆ THỐNG AIMBOT VÒNG TRÒN (FOV AIMBOT)
+------------------------------------------------------------------
+local AimbotEnabled = false
+local FOVRadius = 150
+local CurrentTarget = nil
+
+local FOVCircle = Drawing.new("Circle")
+FOVCircle.Thickness = 2
+FOVCircle.Color = Color3.fromRGB(0, 255, 170)
+FOVCircle.Filled = false
+FOVCircle.Transparency = 1
+FOVCircle.Visible = false
+
+local function isInFOV(targetPlayer)
+    if not isAlive(targetPlayer) then return false end
+    local headPos, onScreen = Camera:WorldToViewportPoint(targetPlayer.Character.Head.Position)
+    if onScreen then
+        local mousePos = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+        local distance = (Vector2.new(headPos.X, headPos.Y) - mousePos).Magnitude
+        return distance <= FOVRadius
+    end
+    return false
+end
+
+local function getTargetInFOV()
+    local candidates = {}
+    local mousePos = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+
+    for _, player in pairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer and isAlive(player) then
+            local headPos, onScreen = Camera:WorldToViewportPoint(player.Character.Head.Position)
+            if onScreen then
+                local distance = (Vector2.new(headPos.X, headPos.Y) - mousePos).Magnitude
+                if distance <= FOVRadius then
+                    table.insert(candidates, player)
+                end
+            end
+        end
+    end
+
+    if #candidates > 0 then
+        return candidates[math.random(1, #candidates)]
+    end
+    return nil
+end
+
+RunService.RenderStepped:Connect(function()
+    local screenCenter = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+    FOVCircle.Position = screenCenter
+    FOVCircle.Radius = FOVRadius
+    FOVCircle.Visible = AimbotEnabled
+
+    if AimbotEnabled then
+        if CurrentTarget and not isInFOV(CurrentTarget) then
+            CurrentTarget = nil
+        end
+
+        if not CurrentTarget then
+            CurrentTarget = getTargetInFOV()
+        end
+
+        if CurrentTarget and isAlive(CurrentTarget) then
+            Camera.CFrame = CFrame.new(Camera.CFrame.Position, CurrentTarget.Character.Head.Position)
+        end
+    else
+        CurrentTarget = nil
+    end
+end)
+
+------------------------------------------------------------------
+-- 4. THÊM ĐIỀU KHIỂN VÀO MENU RAYFIELD
+------------------------------------------------------------------
+
+-- Toggle ESP
+MainTab:CreateToggle({
+   Name = "Bật ESP (Viền Đỏ + Đường Kẻ)",
+   CurrentValue = false,
+   Callback = function(Value)
+      ESPEnabled = Value
+   end,
+})
+
+-- Toggle Aimbot
+MainTab:CreateToggle({
+   Name = "Bật Aimbot (Khóa Vòng Tròn)",
+   CurrentValue = false,
+   Callback = function(Value)
+      AimbotEnabled = Value
+      if not Value then CurrentTarget = nil end
+   end,
+})
+
+-- Slider chỉnh kích thước FOV
+MainTab:CreateSlider({
+   Name = "Kích Thước Vòng Tròn Aimbot",
+   Range = {50, 400},
+   Increment = 5,
+   Suffix = "px",
+   CurrentValue = 150,
+   Callback = function(Value)
+      FOVRadius = Value
+   end,
+})
+
+-- Toggle Nhảy Liên Tục
+local InfiniteJumpEnabled = false
+MainTab:CreateToggle({
+   Name = "Tự Động Nhảy (Infinite Jump)",
+   CurrentValue = false,
+   Callback = function(Value)
+      InfiniteJumpEnabled = Value
+   end,
+})
+
+game:GetService("UserInputService").JumpRequest:Connect(function()
+   if InfiniteJumpEnabled then
+      if LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid") then
+         LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)
+      end
+   end
+end)
+
+------------------------------------------------------------------
+-- 5. NÚT MỞ MENU HÌNH TRÒN 50x50px DI CHUYỂN ĐƯỢC
+------------------------------------------------------------------
+local CoreGui = game:GetService("CoreGui")
+local UserInputService = game:GetService("UserInputService")
+
+if CoreGui:FindFirstChild("MenuToggleButtonGui") then
+    CoreGui.MenuToggleButtonGui:Destroy()
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "MenuToggleButtonGui"
+ScreenGui.Parent = CoreGui
+ScreenGui.ResetOnSpawn = false
+
+local OpenButton = Instance.new("TextButton")
+OpenButton.Name = "OpenButton"
+OpenButton.Parent = ScreenGui
+OpenButton.Size = UDim2.new(0, 50, 0, 50)
+OpenButton.Position = UDim2.new(0.05, 0, 0.4, 0)
+OpenButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+OpenButton.Text = "MENU"
+OpenButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenButton.TextSize = 12
+OpenButton.Font = Enum.Font.SourceSansBold
+OpenButton.Active = true
+
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = OpenButton
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Thickness = 2
+UIStroke.Color = Color3.fromRGB(0, 170, 255)
+UIStroke.Parent = OpenButton
+
+-- Logic Kéo Thả Nút
+local dragging, dragInput, dragStart, startPos
+local function update(input)
+    local delta = input.Position - dragStart
+    OpenButton.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+OpenButton.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = OpenButton.Position
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then dragging = false end
+        end)
+    end
+end)
+
+OpenButton.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then update(input) end
+end)
+
+OpenButton.MouseButton1Click:Connect(function()
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.K, false, game)
+end)
+                                      
