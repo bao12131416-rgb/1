@@ -1,1 +1,400 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('a 19=48 2j 1s:1r("19")a 21=1s:1r("21")a 1q=1s:1r("1q")a 1v=1s:1r("1v")a 1T=1s:1r("1T")a 1i=19.47 a J=1i.1H 2j 1i.34:2q()a v=J:33("1G")1i.34:1l(m(2o)J=2o v=2o:33("1G")b)f 1q:2F("2n")e 1q.2n:1t()b a 1e=d.7("43")1e.31="2n"1e.c=1q 1e.32=l.32.42 a q=d.7("1M")q.31="41"q.c=1e q.E=h.g(n,3Z,3Y)q.M=0 q.w=i.7(0.5,-2U,0.2,0)q.r=i.7(0,1N,0,2W)q.3X=1a q.3W=1a a 2m=d.7("L")2m.K=H.7(0,8)2m.c=q a 1Q=d.7("2e")1Q.c=q 1Q.2d=h.g(2c,2b,2a)1Q.29=2 a B=d.7("1L")B.c=q B.E=h.g(3V,p,40)B.M=0 B.r=i.7(1,0,0,26)B.s=l.s.V B.C="  3U 3T"B.U=h.g(n,n,n)B.T=14 B.1c=l.1c.27 a 2l=d.7("L")2l.K=H.7(0,8)2l.c=B a u=d.7("25")u.c=B u.E=h.g(1y,30,20)u.M=0 u.w=i.7(1,-24,0.5,-9)u.r=i.7(0,18,0,18)u.s=l.s.V u.C="-"u.U=h.g(n,n,n)u.T=12 a 2k=d.7("L")2k.K=H.7(0,4)2k.c=u a F=d.7("1M")F.c=q F.1K=1 F.w=i.7(0,0,0,28)F.r=i.7(1,0,1,-28)a 1p=d.7("3S")1p.c=F 1p.2Z=l.2Z.3R 1p.2Y=l.2Y.3Q 1p.3P=H.7(0,6)a 1P=O u.23:1l(m()1P=I 1P f 1P e F.2X=O q.r=i.7(0,1N,0,26)u.C="+"1F F.2X=1a q.r=i.7(0,1N,0,2W)u.C="-"b b)a 1o={}a m 2g()15 2V,1O 11 Z(1o)x f 1O y 1O.c e a 2T=(2V-1)*30 1O.w=i.7(0.5,-2U,0.1,2T)b b b a m 1R(2S,2R)a t=d.7("1L")t.c=1e t.E=h.g(0,0,0)t.1K=0.4 t.M=0 t.r=i.7(0,1N,0,26)t.s=l.s.V t.C=2S t.U=2R y h.g(n,p,p)2j h.g(0,n,0)t.T=13 a 2i=d.7("L")2i.K=H.7(0,5)2i.c=t 1I.2E(1o,t)2g()D.1W(m()D.Q(2)a 2h=1I.3O(1o,t)f 2h e 1I.3N(1o,2h)b t:1t()2g()b)b a 22=O a m 1Y(1m,1J)a k=d.7("1M")k.c=F k.E=h.g(n,2O,2N)k.M=0 k.r=i.7(0,2M,0,24)a 1d=d.7("L")1d.K=H.7(0,4)1d.c=k a N=d.7("2e")N.c=k N.2d=h.g(2c,2b,2a)N.29=1 a j=d.7("1L")j.c=k j.1K=1 j.w=i.7(0.2L,0,0,0)j.r=i.7(0.3M,0,1,0)j.s=l.s.V j.C=1m j.U=h.g(p,p,p)j.T=12 j.1c=l.1c.27 a o=d.7("25")o.c=k o.E=h.g(1y,p,p)o.M=0 o.w=i.7(1,-44,0.5,-8)o.r=i.7(0,38,0,16)o.s=l.s.V o.C="2P"o.U=h.g(n,n,n)o.T=10 a 1b=d.7("L")1b.K=H.7(0,3)1b.c=o a 1n=O a m 2f(2Q)1n=2Q f 1n e o.E=h.g(46,2K,p)o.C="3L"1F o.E=h.g(1y,p,p)o.C="2P"b 1J(1n)b o.23:1l(m()f 1m=="2. 0.2s 2G"y I 22 e 1R("3K 3J 3I 3H",1a)1V b 2f(I 1n)b)1V 2f,o b a m 2z(1m,1J)a k=d.7("1M")k.c=F k.E=h.g(n,2O,2N)k.M=0 k.r=i.7(0,2M,0,24)a 1d=d.7("L")1d.K=H.7(0,4)1d.c=k a N=d.7("2e")N.c=k N.2d=h.g(2c,2b,2a)N.29=1 a j=d.7("1L")j.c=k j.1K=1 j.w=i.7(0.2L,0,0,0)j.r=i.7(0.6,0,1,0)j.s=l.s.V j.C=1m j.U=h.g(p,p,p)j.T=12 j.1c=l.1c.27 a A=d.7("25")A.c=k A.E=h.g(46,2K,p)A.M=0 A.w=i.7(1,-44,0.5,-8)A.r=i.7(0,38,0,16)A.s=l.s.V A.C="3G"A.U=h.g(n,n,n)A.T=10 a 1b=d.7("L")1b.K=H.7(0,3)1b.c=A A.23:1l(m()1J()b)b a 1k 1Y("1. 3F",m(1j)22=1j f 1j e 1k=21.3E:1l(m()f J e 15 1g,S 11 Z(J:2J())x f S:2I("2H")y S.1Z e S.1Z=O b b b b)1F f 1k e 1k:3D()1k=1z b f J e 15 1g,S 11 Z(J:2J())x f S:2I("2H")e S.1Z=1a b b b b b)a z=1z a m 1A()f z e z:1t()z=1z b b a R=O 1Y("2. 0.2s 2G",m(1j)R=1j D.1W(m()17 R x a 1E={}15 1g,1h 11 Z(19:1X())x f 1h~=1i y 1h.1H y 1h.1H:2F("1G")e 1I.2E(1E,1h.1H.1G)b b f#1E==0 e 1A()f v e z=d.7("3C")z.r=G.7(2D,1,2D)z.3B=1a z.w=v.w+G.7(0,2w,0)z.2C=2C.7("3A 3z")z.2B=l.2B.3y z.c=1v a 1C=1D()17 R y#19:1X()<=1 y(1D()-1C)<0.2A x v.P=z.P+G.7(0,4,0)D.Q()b b 17 R y#19:1X()<=1 x D.Q(0.5)b 1A()1F 15 1g,1B 11 Z(1E)x f I R e 2r b a 1C=1D()17 R y 1B y 1B.c y(1D()-1C)<0.2A x f v e v.P=1B.P*P.7(0,0,3)b D.Q()b b b D.Q()b 1A()b)b)2z("3. 3x 2p",m()D.1W(m()f I v e 1V b a W=d.7("3w")W.3v=G.7(0,1x.3u,0)W.2x=G.7(0,3t,0)W.c=v a 2y=v.w.Y+3s 17 v.w.Y<2y x D.Q()b W.2x=G.7(0,0,0)a 1u=3r.7()1u.3q={J}1u.3p=l.3o.3n a X=1z a 1f=p a 2v={0,3m,2w,1y,3l,3k}17 I X x 15 1g,2u 11 Z(2v)x a 1w=1x.1w(2u)a 1U=v.w+G.7(1x.3j(1w)*1f,0,1x.3i(1w)*1f)a 2t=1v:3h(1U,G.7(0,-3g,0),1u)f I 2t e X=1U+G.7(0,10,0)2r b b f I X e 1f=1f+30 D.Q(0.3f)b b f X e a 1S=1T:3e(v,3d.7(0.45,l.3c.3b,l.3a.39),{P=P.7(X)})1S:37()1S.36:2q()b W:1t()1R("2p 35",O)b)b)',62,257,'|||||||new|||local|end|Parent|Instance|then|if|fromRGB|Color3|UDim2|label|row|Enum|function|255|toggleBtn|50|mainFrame|Size|Font|notif|minimizeBtn|humanoidRootPart|Position|do|and|platformPart|actionBtn|titleLabel|Text|task|BackgroundColor3|contentContainer|Vector3|UDim|not|character|CornerRadius|UICorner|BorderSizePixel|rowStroke|false|CFrame|wait|domainActive|part|TextSize|TextColor3|SourceSansBold|bv|foundVoidPos||ipairs||in||||for||while||Players|true|btnCorner|TextXAlignment|rowCorner|screenGui|scanRadius|_|otherPlayer|player|state|noclipConn|Connect|name|active|activeNotifications|uiListLayout|CoreGui|GetService|game|Destroy|raycastParams|Workspace|rad|math|180|nil|removePlatform|targetRoot|startTime|tick|targets|else|HumanoidRootPart|Character|table|callback|BackgroundTransparency|TextLabel|Frame|280|notifObj|isMinimized|mainStroke|showNotification|moveTween|TweenService|checkPos|return|spawn|GetPlayers|createFeatureRow|CanCollide||RunService|noclipState|MouseButton1Click||TextButton||Left||Thickness|54|67|244|Color|UIStroke|updateState|updateNotificationPositions|foundIndex|notifCorner|or|minCorner|titleCorner|uiCorner|CustomExecutorMenu|newChar|Void|Wait|break||rayResult|angle|angles|120|Velocity|targetY|createActionButton|0001|Material|BrickColor|100|insert|FindFirstChild|Domain|BasePart|IsA|GetDescendants|125|04|260|157|245|OFF|newState|isError|text|targetYOffset|140|index|115|Visible|SortOrder|HorizontalAlignment||Name|ZIndexBehavior|WaitForChild|CharacterAdded|found|Completed|Play||Out|EasingDirection|Quad|EasingStyle|TweenInfo|Create|05|600|Raycast|sin|cos|300|240|60|Exclude|RaycastFilterType|FilterType|FilterDescendantsInstances|RaycastParams|70|55|huge|MaxForce|BodyVelocity|Auto|SmoothPlastic|black|Really|Anchored|Part|Disconnect|Stepped|Noclip|RUN|noclip|the|on|Turn|ON|65|remove|find|Padding|LayoutOrder|Center|UIListLayout|hub|Flash|220|Draggable|Active|59|235||MainFrame|Sibling|ScreenGui||||LocalPlayer|activePlayers'.split('|'),0,{}))
+local Players = activePlayers or game:GetService("Players")
+local RunService = game:GetService("RunService")
+local CoreGui = game:GetService("CoreGui")
+local Workspace = game:GetService("Workspace")
+local TweenService = game:GetService("TweenService")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+player.CharacterAdded:Connect(function(newChar)
+    character = newChar
+    humanoidRootPart = newChar:WaitForChild("HumanoidRootPart")
+end)
+
+if CoreGui:FindFirstChild("CustomExecutorMenu") then
+    CoreGui.CustomExecutorMenu:Destroy()
+end
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "CustomExecutorMenu"
+screenGui.Parent = CoreGui
+screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local mainFrame = Instance.new("Frame")
+mainFrame.Name = "MainFrame"
+mainFrame.Parent = screenGui
+mainFrame.BackgroundColor3 = Color3.fromRGB(255, 235, 59)
+mainFrame.BorderSizePixel = 0
+mainFrame.Position = UDim2.new(0.5, -140, 0.2, 0)
+mainFrame.Size = UDim2.new(0, 280, 0, 115)
+mainFrame.Active = true
+mainFrame.Draggable = true
+
+local uiCorner = Instance.new("UICorner")
+uiCorner.CornerRadius = UDim.new(0, 8)
+uiCorner.Parent = mainFrame
+
+local mainStroke = Instance.new("UIStroke")
+mainStroke.Parent = mainFrame
+mainStroke.Color = Color3.fromRGB(244, 67, 54)
+mainStroke.Thickness = 2
+
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Parent = mainFrame
+titleLabel.BackgroundColor3 = Color3.fromRGB(220, 50, 40)
+titleLabel.BorderSizePixel = 0
+titleLabel.Size = UDim2.new(1, 0, 0, 26)
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.Text = "  Flash hub"
+titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+titleLabel.TextSize = 14
+titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+local titleCorner = Instance.new("UICorner")
+titleCorner.CornerRadius = UDim.new(0, 8)
+titleCorner.Parent = titleLabel
+
+local minimizeBtn = Instance.new("TextButton")
+minimizeBtn.Parent = titleLabel
+minimizeBtn.BackgroundColor3 = Color3.fromRGB(180, 30, 20)
+minimizeBtn.BorderSizePixel = 0
+minimizeBtn.Position = UDim2.new(1, -24, 0.5, -9)
+minimizeBtn.Size = UDim2.new(0, 18, 0, 18)
+minimizeBtn.Font = Enum.Font.SourceSansBold
+minimizeBtn.Text = "-"
+minimizeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+minimizeBtn.TextSize = 12
+
+local minCorner = Instance.new("UICorner")
+minCorner.CornerRadius = UDim.new(0, 4)
+minCorner.Parent = minimizeBtn
+
+local contentContainer = Instance.new("Frame")
+contentContainer.Parent = mainFrame
+contentContainer.BackgroundTransparency = 1
+contentContainer.Position = UDim2.new(0, 0, 0, 28)
+contentContainer.Size = UDim2.new(1, 0, 1, -28)
+
+local uiListLayout = Instance.new("UIListLayout")
+uiListLayout.Parent = contentContainer
+uiListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+uiListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+uiListLayout.Padding = UDim.new(0, 6)
+
+local isMinimized = false
+minimizeBtn.MouseButton1Click:Connect(function()
+    isMinimized = not isMinimized
+    if isMinimized then
+        contentContainer.Visible = false
+        mainFrame.Size = UDim2.new(0, 280, 0, 26)
+        minimizeBtn.Text = "+"
+    else
+        contentContainer.Visible = true
+        mainFrame.Size = UDim2.new(0, 280, 0, 115)
+        minimizeBtn.Text = "-"
+    end
+end)
+
+local activeNotifications = {}
+
+local function updateNotificationPositions()
+    for index, notifObj in ipairs(activeNotifications) do
+        if notifObj and notifObj.Parent then
+            local targetYOffset = (index - 1) * 30
+            notifObj.Position = UDim2.new(0.5, -140, 0.1, targetYOffset)
+        end
+    end
+end
+
+local function showNotification(text, isError)
+    local notif = Instance.new("TextLabel")
+    notif.Parent = screenGui
+    notif.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    notif.BackgroundTransparency = 0.4
+    notif.BorderSizePixel = 0
+    notif.Size = UDim2.new(0, 280, 0, 26)
+    notif.Font = Enum.Font.SourceSansBold
+    notif.Text = text
+    notif.TextColor3 = isError and Color3.fromRGB(255, 50, 50) or Color3.fromRGB(0, 255, 0)
+    notif.TextSize = 13
+    
+    local notifCorner = Instance.new("UICorner")
+    notifCorner.CornerRadius = UDim.new(0, 5)
+    notifCorner.Parent = notif
+    
+    table.insert(activeNotifications, notif)
+    updateNotificationPositions()
+    
+    task.spawn(function()
+        task.wait(2)
+        local foundIndex = table.find(activeNotifications, notif)
+        if foundIndex then
+            table.remove(activeNotifications, foundIndex)
+        end
+        notif:Destroy()
+        updateNotificationPositions()
+    end)
+end
+
+local noclipState = false
+
+local function createFeatureRow(name, callback)
+    local row = Instance.new("Frame")
+    row.Parent = contentContainer
+    row.BackgroundColor3 = Color3.fromRGB(255, 245, 157)
+    row.BorderSizePixel = 0
+    row.Size = UDim2.new(0, 260, 0, 24)
+    
+    local rowCorner = Instance.new("UICorner")
+    rowCorner.CornerRadius = UDim.new(0, 4)
+    rowCorner.Parent = row
+    
+    local rowStroke = Instance.new("UIStroke")
+    rowStroke.Parent = row
+    rowStroke.Color = Color3.fromRGB(244, 67, 54)
+    rowStroke.Thickness = 1
+    
+    local label = Instance.new("TextLabel")
+    label.Parent = row
+    label.BackgroundTransparency = 1
+    label.Position = UDim2.new(0.04, 0, 0, 0)
+    label.Size = UDim2.new(0.65, 0, 1, 0)
+    label.Font = Enum.Font.SourceSansBold
+    label.Text = name
+    label.TextColor3 = Color3.fromRGB(50, 50, 50)
+    label.TextSize = 12
+    label.TextXAlignment = Enum.TextXAlignment.Left
+    
+    local toggleBtn = Instance.new("TextButton")
+    toggleBtn.Parent = row
+    toggleBtn.BackgroundColor3 = Color3.fromRGB(180, 50, 50)
+    toggleBtn.BorderSizePixel = 0
+    toggleBtn.Position = UDim2.new(1, -44, 0.5, -8)
+    toggleBtn.Size = UDim2.new(0, 38, 0, 16)
+    toggleBtn.Font = Enum.Font.SourceSansBold
+    toggleBtn.Text = "OFF"
+    toggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    toggleBtn.TextSize = 10
+    
+    local btnCorner = Instance.new("UICorner")
+    btnCorner.CornerRadius = UDim.new(0, 3)
+    btnCorner.Parent = toggleBtn
+    
+    local active = false
+    
+    local function updateState(newState)
+        active = newState
+        if active then
+            toggleBtn.BackgroundColor3 = Color3.fromRGB(46, 125, 50)
+            toggleBtn.Text = "ON"
+        else
+            toggleBtn.BackgroundColor3 = Color3.fromRGB(180, 50, 50)
+            toggleBtn.Text = "OFF"
+        end
+        callback(active)
+    end
+    
+    toggleBtn.MouseButton1Click:Connect(function()
+        if name == "2. 0.2s Domain" and not noclipState then
+            showNotification("Turn on the noclip", true)
+            return
+        end
+        updateState(not active)
+    end)
+    
+    return updateState, toggleBtn
+end
+
+local function createActionButton(name, callback)
+    local row = Instance.new("Frame")
+    row.Parent = contentContainer
+    row.BackgroundColor3 = Color3.fromRGB(255, 245, 157)
+    row.BorderSizePixel = 0
+    row.Size = UDim2.new(0, 260, 0, 24)
+    
+    local rowCorner = Instance.new("UICorner")
+    rowCorner.CornerRadius = UDim.new(0, 4)
+    rowCorner.Parent = row
+    
+    local rowStroke = Instance.new("UIStroke")
+    rowStroke.Parent = row
+    rowStroke.Color = Color3.fromRGB(244, 67, 54)
+    rowStroke.Thickness = 1
+    
+    local label = Instance.new("TextLabel")
+    label.Parent = row
+    label.BackgroundTransparency = 1
+    label.Position = UDim2.new(0.04, 0, 0, 0)
+    label.Size = UDim2.new(0.6, 0, 1, 0)
+    label.Font = Enum.Font.SourceSansBold
+    label.Text = name
+    label.TextColor3 = Color3.fromRGB(50, 50, 50)
+    label.TextSize = 12
+    label.TextXAlignment = Enum.TextXAlignment.Left
+    
+    local actionBtn = Instance.new("TextButton")
+    actionBtn.Parent = row
+    actionBtn.BackgroundColor3 = Color3.fromRGB(46, 125, 50)
+    actionBtn.BorderSizePixel = 0
+    actionBtn.Position = UDim2.new(1, -44, 0.5, -8)
+    actionBtn.Size = UDim2.new(0, 38, 0, 16)
+    actionBtn.Font = Enum.Font.SourceSansBold
+    actionBtn.Text = "RUN"
+    actionBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    actionBtn.TextSize = 10
+    
+    local btnCorner = Instance.new("UICorner")
+    btnCorner.CornerRadius = UDim.new(0, 3)
+    btnCorner.Parent = actionBtn
+    
+    actionBtn.MouseButton1Click:Connect(function()
+        callback()
+    end)
+end
+
+local noclipConn
+createFeatureRow("1. Noclip", function(state)
+    noclipState = state
+    if state then
+        noclipConn = RunService.Stepped:Connect(function()
+            if character then
+                for _, part in ipairs(character:GetDescendants()) do
+                    if part:IsA("BasePart") and part.CanCollide then
+                        part.CanCollide = false
+                    end
+                end
+            end
+        end)
+    else
+        if noclipConn then
+            noclipConn:Disconnect()
+            noclipConn = nil
+        end
+        if character then
+            for _, part in ipairs(character:GetDescendants()) do
+                if part:IsA("BasePart") then
+                    part.CanCollide = true
+                end
+            end
+        end
+    end
+end)
+
+local platformPart = nil
+local function removePlatform()
+    if platformPart then
+        platformPart:Destroy()
+        platformPart = nil
+    end
+end
+
+local domainActive = false
+createFeatureRow("2. 0.2s Domain", function(state)
+    domainActive = state
+    task.spawn(function()
+        while domainActive do
+            local targets = {}
+            for _, otherPlayer in ipairs(Players:GetPlayers()) do
+                if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                    table.insert(targets, otherPlayer.Character.HumanoidRootPart)
+                end
+            end
+            
+            if #targets == 0 then
+                removePlatform()
+                if humanoidRootPart then
+                    platformPart = Instance.new("Part")
+                    platformPart.Size = Vector3.new(100, 1, 100)
+                    platformPart.Anchored = true
+                    platformPart.Position = humanoidRootPart.Position + Vector3.new(0, 120, 0)
+                    platformPart.BrickColor = BrickColor.new("Really black")
+                    platformPart.Material = Enum.Material.SmoothPlastic
+                    platformPart.Parent = Workspace
+                    
+                    local startTime = tick()
+                    while domainActive and #Players:GetPlayers() <= 1 and (tick() - startTime) < 0.0001 do
+                        humanoidRootPart.CFrame = platformPart.CFrame + Vector3.new(0, 4, 0)
+                        task.wait()
+                    end
+                end
+                
+                while domainActive and #Players:GetPlayers() <= 1 do
+                    task.wait(0.5)
+                end
+                removePlatform()
+            else
+                for _, targetRoot in ipairs(targets) do
+                    if not domainActive then break end
+                    
+                    local startTime = tick()
+                    while domainActive and targetRoot and targetRoot.Parent and (tick() - startTime) < 0.0001 do
+                        if humanoidRootPart then
+                            humanoidRootPart.CFrame = targetRoot.CFrame * CFrame.new(0, 0, 3)
+                        end
+                        task.wait()
+                    end
+                end
+            end
+            task.wait()
+        end
+        removePlatform()
+    end)
+end)
+
+createActionButton("3. Auto Void", function()
+    task.spawn(function()
+        if not humanoidRootPart then return end
+        
+        local bv = Instance.new("BodyVelocity")
+        bv.MaxForce = Vector3.new(0, math.huge, 0)
+        bv.Velocity = Vector3.new(0, 55, 0)
+        bv.Parent = humanoidRootPart
+        
+        local targetY = humanoidRootPart.Position.Y + 70
+        while humanoidRootPart.Position.Y < targetY do
+            task.wait()
+        end
+        
+        bv.Velocity = Vector3.new(0, 0, 0)
+        
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterDescendantsInstances = {character}
+        raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+        
+        local foundVoidPos = nil
+        local scanRadius = 50
+        local angles = {0, 60, 120, 180, 240, 300}
+        
+        while not foundVoidPos do
+            for _, angle in ipairs(angles) do
+                local rad = math.rad(angle)
+                local checkPos = humanoidRootPart.Position + Vector3.new(math.cos(rad) * scanRadius, 0, math.sin(rad) * scanRadius)
+                local rayResult = Workspace:Raycast(checkPos, Vector3.new(0, -600, 0), raycastParams)
+                
+                if not rayResult then
+                    foundVoidPos = checkPos + Vector3.new(0, 10, 0)
+                    break
+                end
+            end
+            if not foundVoidPos then
+                scanRadius = scanRadius + 30
+                task.wait(0.05)
+            end
+        end
+        
+        if foundVoidPos then
+            local moveTween = TweenService:Create(
+                humanoidRootPart,
+                TweenInfo.new(0.45, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                {CFrame = CFrame.new(foundVoidPos)}
+            )
+            moveTween:Play()
+            moveTween.Completed:Wait()
+        end
+        
+        bv:Destroy()
+        showNotification("Void found", false)
+    end)
+end)
