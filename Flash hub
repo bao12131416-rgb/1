@@ -314,14 +314,17 @@ createFeatureRow("2. 0.2s Domain", function(state)
                     platformPart.Parent = Workspace
                     
                     local startTime = tick()
-                    while domainActive and #Players:GetPlayers() <= 1 and (tick() - startTime) < 0.0001 do
+                    -- Giảm thời gian bay tới xuống 0.07s
+                    while domainActive and #Players:GetPlayers() <= 1 and (tick() - startTime) < 0.07 do
                         humanoidRootPart.CFrame = platformPart.CFrame + Vector3.new(0, 4, 0)
                         task.wait()
                     end
                 end
                 
-                while domainActive and #Players:GetPlayers() <= 1 do
-                    task.wait(0.5)
+                -- Giảm thời gian ở lại xuống 0.03s
+                local stayStart = tick()
+                while domainActive and #Players:GetPlayers() <= 1 and (tick() - stayStart) < 0.03 do
+                    task.wait()
                 end
                 removePlatform()
             else
@@ -329,7 +332,17 @@ createFeatureRow("2. 0.2s Domain", function(state)
                     if not domainActive then break end
                     
                     local startTime = tick()
-                    while domainActive and targetRoot and targetRoot.Parent and (tick() - startTime) < 0.0001 do
+                    -- Giảm thời gian bay tới mục tiêu xuống 0.07s
+                    while domainActive and targetRoot and targetRoot.Parent and (tick() - startTime) < 0.07 do
+                        if humanoidRootPart then
+                            humanoidRootPart.CFrame = targetRoot.CFrame * CFrame.new(0, 0, 3)
+                        end
+                        task.wait()
+                    end
+                    
+                    -- Thời gian ở lại tại mỗi mục tiêu là 0.03s
+                    local stayStart = tick()
+                    while domainActive and targetRoot and targetRoot.Parent and (tick() - stayStart) < 0.03 do
                         if humanoidRootPart then
                             humanoidRootPart.CFrame = targetRoot.CFrame * CFrame.new(0, 0, 3)
                         end
