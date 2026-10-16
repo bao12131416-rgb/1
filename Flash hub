@@ -314,16 +314,16 @@ createFeatureRow("2. 0.2s Domain", function(state)
                     platformPart.Parent = Workspace
                     
                     local startTime = tick()
-                    -- Giảm thời gian bay tới xuống 0.07s
-                    while domainActive and #Players:GetPlayers() <= 1 and (tick() - startTime) < 0.07 do
+                    -- Giảm thời gian bay tới xuống 0.005s
+                    while domainActive and #Players:GetPlayers() <= 1 and (tick() - startTime) < 0.005 do
                         humanoidRootPart.CFrame = platformPart.CFrame + Vector3.new(0, 4, 0)
                         task.wait()
                     end
                 end
                 
-                -- Giảm thời gian ở lại xuống 0.03s
+                -- Giảm thời gian ở lại xuống 0.005s
                 local stayStart = tick()
-                while domainActive and #Players:GetPlayers() <= 1 and (tick() - stayStart) < 0.03 do
+                while domainActive and #Players:GetPlayers() <= 1 and (tick() - stayStart) < 0.005 do
                     task.wait()
                 end
                 removePlatform()
@@ -332,17 +332,17 @@ createFeatureRow("2. 0.2s Domain", function(state)
                     if not domainActive then break end
                     
                     local startTime = tick()
-                    -- Giảm thời gian bay tới mục tiêu xuống 0.07s
-                    while domainActive and targetRoot and targetRoot.Parent and (tick() - startTime) < 0.07 do
+                    -- Giảm thời gian bay tới mục tiêu xuống 0.005s
+                    while domainActive and targetRoot and targetRoot.Parent and (tick() - startTime) < 0.005 do
                         if humanoidRootPart then
                             humanoidRootPart.CFrame = targetRoot.CFrame * CFrame.new(0, 0, 3)
                         end
                         task.wait()
                     end
                     
-                    -- Thời gian ở lại tại mỗi mục tiêu là 0.03s
+                    -- Thời gian ở lại tại mỗi mục tiêu là 0.005s
                     local stayStart = tick()
-                    while domainActive and targetRoot and targetRoot.Parent and (tick() - stayStart) < 0.03 do
+                    while domainActive and targetRoot and targetRoot.Parent and (tick() - stayStart) < 0.005 do
                         if humanoidRootPart then
                             humanoidRootPart.CFrame = targetRoot.CFrame * CFrame.new(0, 0, 3)
                         end
